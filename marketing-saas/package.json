@@ -1,0 +1,25 @@
+{
+  "name": "marketing-saas",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Marketing SaaS platform with a Next.js frontend and Express backend.",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace frontend\" \"npm run dev --workspace backend\"",
+    "dev:frontend": "npm run dev --workspace frontend",
+    "dev:backend": "npm run dev --workspace backend",
+    "build": "npm run build --workspace frontend && npm run build --workspace backend",
+    "start": "concurrently \"npm run start --workspace frontend\" \"npm run start --workspace backend\""
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "overrides": {
+    "next": {
+      "postcss": "8.5.10"
+    }
+  }
+}
