@@ -20,14 +20,22 @@ For the simplest local startup on Windows:
 5. Keep both CMD windows open while using the project.
 6. Stop the project by closing both CMD windows or pressing `Ctrl + C` in each one.
 
-## Demo login
+## Demo login users by role
 
-Use these demo credentials in the frontend login form:
+Use password `password` for every demo account. After login, the frontend redirects each user to a role-specific dashboard at `/dashboard/<role>`.
 
-- Email: `demo@marketing-saas.local`
-- Password: `password`
+| Role | Email | Company / Organization |
+| --- | --- | --- |
+| `super_admin` | `super_admin@marketing-saas.local` | Marketing SaaS Platform |
+| `company_admin` | `company_admin@marketing-saas.local` | Acme Growth Co. |
+| `marketing_manager` | `marketing_manager@marketing-saas.local` | Acme Growth Co. |
+| `designer` | `designer@marketing-saas.local` | Acme Growth Co. |
+| `content_writer` | `content_writer@marketing-saas.local` | Acme Growth Co. |
+| `media_buyer` | `media_buyer@marketing-saas.local` | Nova Retail Group |
+| `accountant` | `accountant@marketing-saas.local` | Nova Retail Group |
+| `client` | `client@marketing-saas.local` | Nova Retail Group |
 
-The demo backend accepts any non-empty email and password, but the values above are pre-filled in the UI for convenience.
+This is only a permissions foundation for a multi-company SaaS. It does not build the full CRM, campaign management, or reporting modules yet.
 
 ## Local links
 

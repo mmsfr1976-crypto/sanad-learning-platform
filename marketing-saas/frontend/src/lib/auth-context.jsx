@@ -14,7 +14,12 @@ export function AuthProvider({ children }) {
     try {
       const savedUser = window.localStorage.getItem(STORAGE_KEY);
       if (savedUser) {
-        setUser(JSON.parse(savedUser));
+        const parsedUser = JSON.parse(savedUser);
+        if (parsedUser?.role && parsedUser?.dashboardPath && parsedUser?.organization?.name) {
+          setUser(parsedUser);
+        } else {
+          window.localStorage.removeItem(STORAGE_KEY);
+        }
       }
     } catch {
       window.localStorage.removeItem(STORAGE_KEY);
